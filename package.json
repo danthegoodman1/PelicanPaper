@@ -1,0 +1,22 @@
+{
+  "name": "pelicanpaper",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Pelican Paper",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.24",
+    "tsx": "^4.4.0",
+    "typescript": "~5.3.0"
+  },
+  "scripts": {
+    "sparrow": "tsx sparrow/main.ts",
+    "dev": "tsx watch src/index.ts"
+  },
+  "author": "danthegoodman1",
+  "license": "ISC"
+}
