@@ -1,6 +1,6 @@
 import express from "express"
 
-export async function startCoordinator() {
+export function startWorker(port: number) {
   const app = express()
   app.use(express.json())
   app.disable("x-powered-by")
@@ -9,8 +9,8 @@ export async function startCoordinator() {
     res.sendStatus(200)
   })
 
-  const server = app.listen(process.env.SPRW_COORD_PORT, () => {
-    console.log(`Coordinator listening on port ${process.env.SPRW_COORD_PORT}`)
+  const server = app.listen(port, () => {
+    console.log(`Worker listening on port ${port}`)
   })
 
   return () => {
